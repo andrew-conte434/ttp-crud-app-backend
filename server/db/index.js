@@ -9,5 +9,7 @@ Student.belongsTo(Campus)
 module.exports = {
     db,
     Campus,
-    Student
+    Student,
 }
+
+//db.sync({force: true});
