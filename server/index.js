@@ -5,7 +5,7 @@ const api = require('./api/index')
 const cors = require('cors')
 
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000
 
 app.use(cors())
 app.use(morgan('dev'))
@@ -16,8 +16,8 @@ app.use('/api', api)
 
 db.sync().then(() =>{
     console.log('db synced')
-    app.listen(port, () =>
-        console.log(`App is running on port: ${port}`)
+    app.listen(PORT, () =>
+        console.log(`App is running on port: ${PORT}`)
     )
 }).catch((err) => {
     console.log(err.message)

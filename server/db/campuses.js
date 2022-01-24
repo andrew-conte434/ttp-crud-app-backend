@@ -13,10 +13,6 @@ const Campus = db.define('campus', {
         type : Sequelize.STRING,
         allowNull : false
     },
-    tuition : {
-        type : Sequelize.INTEGER,
-        allowNull : false
-    },
     description : {
         type : Sequelize.STRING,
         allowNull : false
